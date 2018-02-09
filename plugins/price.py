@@ -4,7 +4,7 @@ from slackbot.bot import respond_to
 from slackbot.bot import listen_to
 from slackbot.bot import default_reply
 
-@listen_to('/price')
+@listen_to('\$price')
 def say_prices(message):
     prices = bitflyerapi.get_prices()
     t = '''BTC/JPY : {0[btc_jpy]}
